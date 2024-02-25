@@ -1,0 +1,47 @@
+/* Styles for the todo list container */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Styles for todo list items */
+  .todo-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  
+  /* Style for completed todo items */
+  .todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /* Style for todo item checkboxes */
+  .todo-item input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Style for todo item delete button */
+  .todo-item .delete-btn {
+    float: right;
+    cursor: pointer;
+    color: red;
+  }
+  
+  /* Style for input form */
+  .todo-form {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for submit button */
+  .todo-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

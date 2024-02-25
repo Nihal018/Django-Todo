@@ -1,0 +1,30 @@
+
+<form method="post" action="{% url 'todo:create_task' %}" style=" margin-left:26px">
+    {% csrf_token %}
+    <label >Task Title:</label>
+    <input type="text" name="title" style=" margin-left:10px">
+    <label style=" margin-left:10px">Task Details</label>
+    <input type="text" name="details" style=" margin-left:10px">
+    <button style=" margin-left:15px">Submit</button>
+
+</form>
+
+<br>
+<br>
+
+<h3 style=" margin-left:26px">Welcome to Your Todo List</h3>
+<br>
+
+{% if todo_list %}
+    <ul>
+    {% for task in todo_list %}
+        <li><a href="{% url "todo:detail" task.id %}">{{ task.title}}</a>  <a href ="{% url "todo:delete_task" task.id %}"> 
+            <button style="margin-left:10px"> Delete</button> </a>  
+        </li>
+        <br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks are available.</p>
+{% endif %}
+
